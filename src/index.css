@@ -1,0 +1,131 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.fa-stack-overflow{
+  color: orange;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.searchBar {
+  border: 0;
+  padding: 0;
+  font-family: inherit;
+  background: transparent;
+  color: inherit;
+  cursor: pointer;
+}
+
+.navbar {
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  width: 100%;
+  height: 72px;
+  padding: 0 20px;
+  background: #3d3d3d;
+  color: #f9f9f9;
+}
+
+@media only screen and (min-width: 600px) {
+  .navbar {
+    justify-content: space-between;
+  }
+}
+
+.search {
+  position: relative;
+  z-index: 1;
+  flex: 1 1 auto;
+  height: 44px;
+  padding-left: 15px;
+  font-size: 16px;
+  border: 0;
+  border-radius: 8px;
+  background: white;
+  color: black;
+  font-family: "Euclid Circular A";
+  visibility: hidden;
+  opacity: 0;
+  outline: none;
+}
+
+body.open .search {
+  position: fixed;
+  top: 0;
+  left: 0;
+  opacity: 1;
+  border-radius: 0;
+  visibility: visible;
+  background: #19191c;
+  width: 100%;
+  height: 72px;
+  margin: 0;
+  padding-left: 76px;
+}
+
+@media only screen and (min-width: 600px) {
+  .search {
+    opacity: 1;
+    visibility: visible;
+    flex: 0 0 360px;
+    margin-right: auto;
+    transition-property: opacity, visibility;
+    transition-duration: 0.3s;
+  }
+}
+
+.search::placeholder {
+  color: #939393;
+}
+
+
+.navbar-menu {
+  display: flex;
+}
+
+.navbar-menu > .searchBar {
+  position: relative;
+  flex: 0 0 40px;
+  display: grid;
+  place-items: center;
+  font-size: 28px;
+  height: 72px;
+  width: 40px;
+  opacity: 0.3;
+}
+
+.navbar-menu > .searchBar.active {
+  opacity: 1;
+}
+
+/* Error and success box */
+
+.error-box{
+  border: 2px solid red !important;
+}
+
+.success-box{
+  border: 2px solid green !important;
+}
+
+
+
+

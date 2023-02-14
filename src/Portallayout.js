@@ -1,0 +1,23 @@
+import React from 'react'
+import { Outlet } from 'react-router-dom'
+import Sidebar from './Sidebar'
+import Topbar from './Topbar'
+
+function Portallayout() {
+  return (
+    <>
+    <Topbar/>
+    <div id="wrapper">
+        <Sidebar/>
+        <div id="content-wrapper" class="d-flex flex-column">
+          <div id="content">
+            
+            <Outlet/>
+          </div>
+        </div>
+      </div>
+    </>
+  )
+}
+
+export default Portallayout
